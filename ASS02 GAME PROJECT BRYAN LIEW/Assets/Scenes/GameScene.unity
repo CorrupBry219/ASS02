@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reach: 3
-  Crosshair: {fileID: 654136832}
+  crosshair: {fileID: 654136832}
   infoText: {fileID: 965221306}
 --- !u!114 &596709913
 MonoBehaviour:
