@@ -14,10 +14,10 @@ public class MouseLook : MonoBehaviour
     [Tooltip("The minimum and maximum angle that the camera can move on the y axis.")]
     [SerializeField] private Vector2 verticalClamp = new Vector2(-45, 70);
     
-    private Vector2 smoothing;
-    private Vector2 result;
-    private Transform character;
-    private bool mouseLookEnabled = false;
+    public Vector2 smoothing;
+    public Vector2 result;
+    public Transform character;
+    public bool mouseLookEnabled = false;
 
     /// <summary>
     /// Use to turn mouse look on and off. To toggle cursor, use ToggleMouseLook method.
@@ -25,7 +25,7 @@ public class MouseLook : MonoBehaviour
     public bool MouseLookEnabled { get { return mouseLookEnabled; } set { ToggleMouseLook(value); } }
 
     //Awake is executed before the Start method
-    private void Awake()
+        public void Awake()
     {
         if (transform.parent != null)
         {
@@ -43,13 +43,13 @@ public class MouseLook : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    private void Start()
+    public void Start()
     {
         ToggleMouseLook(true, true);
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
         if (mouseLookEnabled == true)
         {
