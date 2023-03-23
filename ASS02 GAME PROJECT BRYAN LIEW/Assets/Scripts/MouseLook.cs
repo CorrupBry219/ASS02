@@ -8,7 +8,7 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     [Tooltip("The amount of influence mouse input has on camera movement. Must have a value above 0.")]
-    [SerializeField] private float sensitivity;
+    [SerializeField] private float sensitivity; 
     [Tooltip("The amount of 'drag' applied to the camera. Must have a value above 0.")]
     [SerializeField] private float drag;
     [Tooltip("The minimum and maximum angle that the camera can move on the y axis.")]
