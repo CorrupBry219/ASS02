@@ -24,19 +24,20 @@ public class Interaction : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit objectHit, reach) == true)
         { Debug.Log("Hit a " + objectHit.collider.name);
 
-            if (objectHit.collider.name == "PFB_Fridge")
+      
+           
+            if (objectHit.collider.name == "PFB_Bed" || objectHit.collider.name == "PFB_DiningTable" || objectHit.collider.name == "PFB_Toilet")
             {
-                Debug.Log("I hit the fridge");          
+                Debug.Log("I hit the Queen sized bed!");
                 crosshair.color = Color.green;
                 infoText.text = objectHit.collider.name;
             }
             else
             {
-                Debug.Log("where is that fridge?");
+                Debug.Log("where is that kitchen Queen sized bed?");
                 crosshair.color = Color.white;
                 infoText.text = "Hover over objects to see info there.";
             }
-
         }
     }
 }
