@@ -28,15 +28,11 @@ public class Interaction : MonoBehaviour
            
             if (objectHit.collider.name == "PFB_Bed" || objectHit.collider.name == "PFB_DiningTable" || objectHit.collider.name == "PFB_Toilet")
             {
-                Debug.Log("I hit the Queen sized bed!");
-                crosshair.color = Color.green;
-                infoText.text = objectHit.collider.name;
+               
             }
             else
             {
-                Debug.Log("where is that kitchen Queen sized bed?");
-                crosshair.color = Color.white;
-                infoText.text = "Hover over objects to see info there.";
+
             }
         }
     }
