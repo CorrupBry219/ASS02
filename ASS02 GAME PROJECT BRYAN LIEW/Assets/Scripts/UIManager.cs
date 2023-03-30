@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyUp(KeyCode.Q) == true)
+        if (Input.GetKeyUp(KeyCode.Escape) == true)
         {
             Debug.Log("The game will quit.");
             Application.Quit();
