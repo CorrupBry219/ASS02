@@ -542,7 +542,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 04597eae0de6c8947a1f190b3e7165f4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -641,6 +641,7 @@ MonoBehaviour:
   reach: 3
   crosshair: {fileID: 654136832}
   infoText: {fileID: 965221306}
+  audioClick: {fileID: 8300000, guid: 22d7a3a4222c9c14ea5880b3613670a2, type: 3}
 --- !u!114 &596709913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,8 +770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 231.27515}
-  m_SizeDelta: {x: 800, y: 120}
+  m_AnchoredPosition: {x: 617, y: 461}
+  m_SizeDelta: {x: 635, y: 102.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965221306
 MonoBehaviour:

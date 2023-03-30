@@ -9,11 +9,14 @@ public class Interaction : MonoBehaviour
     public Image crosshair;
     public Text infoText;
 
+    public AudioClip audioClick;
+    private AudioSource audioSource;
 
     void Start()
     {
         crosshair.color = Color.white;
         infoText.text = "Hover over objects to see info here.";
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,11 +32,36 @@ public class Interaction : MonoBehaviour
             if (objectHit.collider.name == "PFB_Bed" || objectHit.collider.name == "PFB_DiningTable" || objectHit.collider.name == "PFB_Toilet")
             {
                
+                crosshair.color = Color.green;
+                if (Input.GetKeyDown(KeyCode.Mouse0) == true)
+                {
+                    Debug.Log("Mouse click");
+                    audioSource.PlayOneShot(audioClick);
+                    switch (objectHit.collider.name)
+                    {
+                        case "PFB_Bed":
+                        infoText.text = objectHit.collider.name;
+                        break;
+                        case "PFB_DiningTable":
+                        infoText.text = objectHit.collider.name;
+                        break;
+                        case "PFB_Toilet":
+                        infoText.text = objectHit.collider.name;
+                        break;
+                    }
+
+
+                }
             }
+            
+
             else
             {
-
+                
+                crosshair.color = Color.white;
+                infoText.text = "Hover over objects to see info there.";
             }
         }
     }
+
 }
