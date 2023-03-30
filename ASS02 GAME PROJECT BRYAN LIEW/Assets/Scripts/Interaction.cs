@@ -40,8 +40,8 @@ public class Interaction : MonoBehaviour
                     switch (objectHit.collider.name)
                     {
                         case "PFB_Bed":
-                        infoText.text = objectHit.collider.name;
-                        break;
+                        infoText.text = objectHit.collider.name; 
+                        break; 
                         case "PFB_DiningTable":
                         infoText.text = objectHit.collider.name;
                         break;
