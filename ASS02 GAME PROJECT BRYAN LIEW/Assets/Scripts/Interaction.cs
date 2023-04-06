@@ -23,12 +23,12 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * reach, Color.blue, 0.01f);
-
+        ///raycasting is how the objects are found and interacted with.
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit objectHit, reach) == true)
-        { Debug.Log("Hit a " + objectHit.collider.name);
+        {
 
       
-           
+           ///when the crosshair is on the object and clicks it will display the information text.
             if (objectHit.collider.name == "PFB_Bed" || objectHit.collider.name == "PFB_DiningTable" || objectHit.collider.name == "PFB_Toilet")
             {
                
@@ -54,7 +54,7 @@ public class Interaction : MonoBehaviour
                 }
             }
             
-
+            ///this is an indicator text instructing the player that you can see info over objects.
             else
             {
                 

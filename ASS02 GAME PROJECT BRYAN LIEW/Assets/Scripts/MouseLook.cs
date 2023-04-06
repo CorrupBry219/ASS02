@@ -33,12 +33,12 @@ public class MouseLook : MonoBehaviour
         }
         else 
         {
-            Debug.LogWarning($"{name} should be the child of an empty object!");
+           
         }
 
         if(transform.localPosition != Vector3.zero) 
         {
-            Debug.LogWarning($"{name} should have a local space of (0,0,0)!");
+            
         }
     }
 
@@ -50,7 +50,7 @@ public class MouseLook : MonoBehaviour
 
     // Update is called once per frame
     public void Update()
-    {
+    {   ///this is how you move your mouse to look around the environment.
         if (mouseLookEnabled == true)
         {
             var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
@@ -66,17 +66,14 @@ public class MouseLook : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Toggles the mouse look on and off.
-    /// Can optionally toggle the mouse cursor on and off.
-    /// </summary>
+    
     /// <param name="mouseLookActive"></param>
     /// <param name="toggleCursor"></param>
     public void ToggleMouseLook(bool mouseLookActive, bool toggleCursor = false)
     {
         mouseLookEnabled = mouseLookActive;
         if (toggleCursor == true)
-        {
+        {   ///the mouse look is active
             if (mouseLookActive == true)
             {
                 Cursor.lockState = CursorLockMode.Locked;

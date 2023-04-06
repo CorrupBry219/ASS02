@@ -34,10 +34,10 @@ public class PlayerController : MonoBehaviour
 
         if (controller.isGrounded == true)
         {
-            //Do stuff here
+           
             fallSpeed = -gravity * Time.deltaTime;
 
-            // check the key that is pressed
+            // if the key is pressed then the sprint should be active when moving.
             if (Input.GetKeyDown(KeyCode.LeftShift) == true)
             {
                 if (currentSpeed != sprintSpeed)
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         motion += transform.forward * Input.GetAxisRaw("Vertical") * currentSpeed * Time.deltaTime;
         motion += transform.right * Input.GetAxisRaw("Horizontal") * currentSpeed * Time.deltaTime;
         motion.y += fallSpeed;
-
+        ///this is how you move the player object and by extension you.
         if (controller.enabled)
         {
             controller.Move(motion);
