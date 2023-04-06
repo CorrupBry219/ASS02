@@ -35,18 +35,18 @@ public class Interaction : MonoBehaviour
                 crosshair.color = Color.green;
                 if (Input.GetKeyDown(KeyCode.Mouse0) == true)
                 {
-                    Debug.Log("Mouse click");
+                    
                     audioSource.PlayOneShot(audioClick);
                     switch (objectHit.collider.name)
                     {
                         case "PFB_Bed":
-                        infoText.text = objectHit.collider.name; 
+                            infoText.text = "A queen sized bed thats a part of this nicely sized bedroom.";
                         break; 
                         case "PFB_DiningTable":
-                        infoText.text = objectHit.collider.name;
+                            infoText.text = "A Kitchen Dining table for the whole family to enjoy a meal.";
                         break;
                         case "PFB_Toilet":
-                        infoText.text = objectHit.collider.name;
+                            infoText.text = "A neccesary bathroom toilet to dispose of excretment.";
                         break;
                     }
 
